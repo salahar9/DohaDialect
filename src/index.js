@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Switch } from "react-router-dom";
 
 import "assets/vendor/nucleo/css/nucleo.css";
@@ -27,17 +27,17 @@ import App from "App";
 
 import { AuthProvider } from "./auth-context/auth.context";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = document.getElementById("root");
 let user = localStorage.getItem("user");
 user = JSON.parse(user);
 
-
-root.render(
+ReactDOM.render(
   <AuthProvider userData={user}>
     <BrowserRouter>
       <Switch>
         <App />
       </Switch>
     </BrowserRouter>
-  </AuthProvider>
+  </AuthProvider>,
+  root
 );
