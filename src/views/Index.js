@@ -46,10 +46,12 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 
+import TranslateBox from "./IndexSections/TranslateBox.js";
 const Index = () => {
   return (
     <>
       <DemoNavbar />
+      <TranslateBox />
     </>
   );
 };
