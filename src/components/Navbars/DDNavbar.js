@@ -108,22 +108,20 @@ const DDNavbar = () => {
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-collection d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Menu</span>
+                    <span className="nav-link-inner--text">Weather</span>
                   </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem to="/DDlanding-page" tag={Link}>
-                      Landing
-                    </DropdownItem>
-                    <DropdownItem to="/profile-page" tag={Link}>
-                      Profile
-                    </DropdownItem>
-                    <DropdownItem to="/login-page" tag={Link}>
-                      Login
-                    </DropdownItem>
-                    <DropdownItem to="/register-page" tag={Link}>
-                      Register
-                    </DropdownItem>
-                  </DropdownMenu>
+                </UncontrolledDropdown>
+                <UncontrolledDropdown nav>
+                  <DropdownToggle nav>
+                    <i className="ni ni-collection d-lg-none mr-1" />
+                    <span className="nav-link-inner--text">Scores</span>
+                  </DropdownToggle>
+                </UncontrolledDropdown>
+                <UncontrolledDropdown nav>
+                  <DropdownToggle nav>
+                    <i className="ni ni-collection d-lg-none mr-1" />
+                    <span className="nav-link-inner--text">About us</span>
+                  </DropdownToggle>
                 </UncontrolledDropdown>
               </Nav>
               <Nav className="align-items-lg-center ml-lg-auto" navbar>

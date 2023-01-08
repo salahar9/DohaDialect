@@ -9,15 +9,16 @@ const TranslateBox = () => {
   };
   return (
     <>
-      <Button onClick={submit} color="primary" type="button">
-        Translate
-      </Button>
+      
       <Input
         id="translatebox"
         placeholder="Write a large text here ..."
         rows="3"
         type="textarea"
       />
+      <Button onClick={submit} color="primary" type="button">
+        Translate
+      </Button>
       <div></div>
     </>
   );

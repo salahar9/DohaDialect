@@ -1,20 +1,5 @@
-/*!
+// Index l'Assli
 
-=========================================================
-* Argon Design System React - v1.1.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -47,10 +32,13 @@ import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 
 import TranslateBox from "./IndexSections/TranslateBox.js";
+import Carousel_landing from "./IndexSections/Carousel_landing.js";
+import DDNavbar from "components/Navbars/DDNavbar.js";
 const Index = () => {
   return (
     <>
-      <DemoNavbar />
+      <DDNavbar />
+      <Carousel_landing />
       <TranslateBox />
     </>
   );
