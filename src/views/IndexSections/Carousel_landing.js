@@ -1,20 +1,5 @@
-/*!
 
-=========================================================
-* Argon Design System React - v1.1.1
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -64,7 +49,7 @@ class Carousel_landing extends React.Component {
                   <Col lg="6">
                     <h1 className="display-3 text-white">
                       <br></br>
-                      <span>Connecting the world through the beauty of <b>Doha Dialect.</b></span>
+                      <span>Connecting the world through the beauty of <b><b>Doha Dialect.</b></b></span>
                     </h1>
                     <p className="lead text-white">
                     Experience the timeless beauty and rich culture of the Arabosphere 
@@ -111,11 +96,6 @@ class Carousel_landing extends React.Component {
           </section>
           {/* 1st Hero Variation */}
         </div>
-      
-       
-        
-        
-
         
       </main>
       </>

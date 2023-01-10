@@ -99,24 +99,42 @@ const DDNavbar = () => {
                 </Row>
               </div>
               <Nav className="navbar-nav-hover align-items-lg-center" navbar>
+                
+                <NavLink
+                  href="/"
+                  target="/"
+                >
+                
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-ui-04 d-lg-none mr-1" />
                     <span className="nav-link-inner--text" to="/DDlanding-page" tag={Link}>Home</span>
                   </DropdownToggle>
                 </UncontrolledDropdown>
+                
+                </NavLink>
+                
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-collection d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Weather</span>
                   </DropdownToggle>
                 </UncontrolledDropdown>
+                
+                <NavLink
+                  href="/scores-page"
+                  target="/scores-page"
+                >
+
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
-                    <i className="ni ni-collection d-lg-none mr-1" />
+                    <i className="ni ni-ui-04 d-lg-none mr-1"/>
                     <span className="nav-link-inner--text">Scores</span>
                   </DropdownToggle>
                 </UncontrolledDropdown>
+
+                </NavLink>
+                
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-collection d-lg-none mr-1" />

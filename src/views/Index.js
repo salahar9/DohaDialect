@@ -37,6 +37,7 @@ import TranslateBox from "./IndexSections/TranslateBox.js";
 import Carousel_landing from "./IndexSections/Carousel_landing.js";
 import DDNavbar from "components/Navbars/DDNavbar.js";
 import Translate from "./IndexSections/Translate.js";
+import DDFooter from "components/Footers/DDFooter.js";
 const Index = () => {
   return (
     <>
@@ -44,6 +45,7 @@ const Index = () => {
       <Carousel_landing />
       <Translate />
       <TranslateBox />
+      <DDFooter />
     </>
   );
 };

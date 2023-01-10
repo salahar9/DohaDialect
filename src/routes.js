@@ -3,6 +3,7 @@ import DDLanding from "views/examples/DDLanding.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
+import Scores from "views/examples/Scores.js";
 
 const routes = [
   {
@@ -32,6 +33,12 @@ const routes = [
     path: '/register-page',
     key: 'register',
     component: Register,
+  },
+  {
+    path: '/scores-page',
+    key: 'scores',
+    component: Scores,
+    protected: false,
   }
 ]
 

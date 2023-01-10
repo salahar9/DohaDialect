@@ -13,7 +13,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-class SimpleFooter extends React.Component {
+class DDFooter extends React.Component {
   render() {
     return (
       <>
@@ -22,13 +22,33 @@ class SimpleFooter extends React.Component {
             <Row className=" row-grid align-items-center mb-5">
               <Col lg="6">
                 <h3 className=" text-primary font-weight-light mb-2">
+                <br></br>
                 Thank you for choosing DohaDialect!
                 </h3>
                 <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on any of these platforms.
+                  
+                  Feel free to get in touch with us on any of these platforms.
+                  <br></br>
+                  <br></br>
+                  Because we're always here to help you fully experience the culture and people of Qatar during the 2022 World Cup.
+                  
                 </h4>
               </Col>
               <Col className="text-lg-center btn-wrapper" lg="6">
+              <Button
+                  className="btn-icon-only rounded-circle ml-1"
+                  color="facebook"
+                  href="https://linkedin.com/"
+                  id="tooltip829810202"
+                  target="_blank"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-linkedin" />
+                  </span>
+                </Button>
+                <UncontrolledTooltip delay={0} target="tooltip829810202">
+                  Follow us
+                </UncontrolledTooltip>
                 <Button
                   className="btn-icon-only rounded-circle"
                   color="twitter"
@@ -57,20 +77,7 @@ class SimpleFooter extends React.Component {
                 <UncontrolledTooltip delay={0} target="tooltip837440414">
                   Like us
                 </UncontrolledTooltip>
-                <Button
-                  className="btn-icon-only rounded-circle ml-1"
-                  color="dribbble"
-                  href="https://dribbble.com/"
-                  id="tooltip829810202"
-                  target="_blank"
-                >
-                  <span className="btn-inner--icon">
-                    <i className="fa fa-dribbble" />
-                  </span>
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip829810202">
-                  Follow us
-                </UncontrolledTooltip>
+                
                 <Button
                   className="btn-icon-only rounded-circle ml-1"
                   color="github"
@@ -93,40 +100,25 @@ class SimpleFooter extends React.Component {
                 <div className=" copyright">
                   &copy; {" "}
                   <a
-                    href="https://www.creative-tim.com"
+                    href="https://www.linkedin.com"
                     target="_blank"
                   >
-                    Creative Tim
+                    ANIBA Souhail & BELHIAK Salaheddine
                   </a>
-                  {" - "} coded by AppSeed.
+                  {" - "} IAGI 2023
                 </div>
               </Col>
               <Col md="6">
                 <Nav className=" nav-footer justify-content-end">
                   <NavItem>
                     <NavLink
-                      href="https://appseed.us/product/argon-design-system/api-server-nodejs/react/"
+                      href="http://ensam-casa.ma/"
                       target="_blank"
                     >
-                      Download
+                      www.ensam-casa.ma
                     </NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://appseed.us/about/"
-                      target="_blank"
-                    >
-                      About Us
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://blog.appseed.us/"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
+                  
                 </Nav>
               </Col>
             </Row>
