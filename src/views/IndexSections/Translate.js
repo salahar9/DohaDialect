@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form, TextArea, Button, Icon } from "semantic-ui-react";
 import axios from "axios";
-
+import apiroute from "APIutils";
 export default function Translate() {
   const [inputText, setInputText] = useState("");
   const [resultText, setResultText] = useState("");
@@ -10,7 +10,7 @@ export default function Translate() {
   const [detectLanguageKey, setdetectedLanguageKey] = useState("");
   const getLanguageSource = () => {
     axios
-      .post(`https://libretranslate.de/detect`, {
+      .post(`${apiroute}/detect`, {
         q: inputText,
       })
       .then((response) => {
@@ -29,7 +29,7 @@ export default function Translate() {
       format: "text",
     };
     console.log(data);
-    axios.post(`https://libretranslate.de/translate`, data).then((response) => {
+    axios.post(`${apiroute}/translate`, data).then((response) => {
       console.log(response.data);
       console.log(response.languageKey);
       setResultText(response.data.translatedText);
@@ -41,7 +41,7 @@ export default function Translate() {
   };
 
   useEffect(() => {
-    axios.get(`https://libretranslate.de/languages`).then((response) => {
+    axios.get(`${apiroute}/languages`).then((response) => {
       setLanguagesList(response.data);
     });
 
@@ -85,4 +85,3 @@ export default function Translate() {
     </div>
   );
 }
-
