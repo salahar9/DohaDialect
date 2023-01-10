@@ -10,7 +10,7 @@ export default function Translate() {
   const [detectLanguageKey, setdetectedLanguageKey] = useState("");
   const getLanguageSource = () => {
     axios
-      .post(`https://libretranslate.de/detect`, {
+      .post(`https://libretranslate.com/detect`, {
         q: inputText,
       })
       .then((response) => {
@@ -29,7 +29,7 @@ export default function Translate() {
       format: "text",
     };
     console.log(data);
-    axios.post(`https://libretranslate.de/translate`, data).then((response) => {
+    axios.post(`https://libretranslate.com/translate`, data).then((response) => {
       console.log(response.data);
       console.log(response.languageKey);
       setResultText(response.data.translatedText);
@@ -41,7 +41,7 @@ export default function Translate() {
   };
 
   useEffect(() => {
-    axios.get(`https://libretranslate.de/languages`).then((response) => {
+    axios.get(`https://libretranslate.com/languages`).then((response) => {
       setLanguagesList(response.data);
     });
 
