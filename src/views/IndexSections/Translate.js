@@ -10,11 +10,7 @@ export default function Translate() {
   const [detectLanguageKey, setdetectedLanguageKey] = useState("");
   const getLanguageSource = () => {
     axios
-<<<<<<< HEAD
-      .post(`https://libretranslate.com/detect`, {
-=======
       .post(`${apiroute}/detect`, {
->>>>>>> 91237b0680f17219d60cc375e6f8f49d41b16dc7
         q: inputText,
       })
       .then((response) => {
@@ -33,11 +29,7 @@ export default function Translate() {
       format: "text",
     };
     console.log(data);
-<<<<<<< HEAD
-    axios.post(`https://libretranslate.com/translate`, data).then((response) => {
-=======
     axios.post(`${apiroute}/translate`, data).then((response) => {
->>>>>>> 91237b0680f17219d60cc375e6f8f49d41b16dc7
       console.log(response.data);
       console.log(response.languageKey);
       setResultText(response.data.translatedText);
@@ -49,11 +41,7 @@ export default function Translate() {
   };
 
   useEffect(() => {
-<<<<<<< HEAD
-    axios.get(`https://libretranslate.com/languages`).then((response) => {
-=======
     axios.get(`${apiroute}/languages`).then((response) => {
->>>>>>> 91237b0680f17219d60cc375e6f8f49d41b16dc7
       setLanguagesList(response.data);
     });
 
