@@ -8,13 +8,13 @@ import Scores from "views/examples/Scores.js";
 
 const routes = [
   {
-    path: "/index2",
+    path: "/",
     key: "index2",
     component: Index2,
     protected: false,
   },
   {
-    path: "/",
+    path: "/oldindex",
     key: "index",
     component: Index,
     protected: false,
@@ -50,4 +50,3 @@ const routes = [
 ];
 
 export default routes;
-
