@@ -22,10 +22,6 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-import { useAuth } from "../../auth-context/auth.context";
-import AuthApi from "../../api/auth";
-import { useHistory } from "react-router-dom";
-
 const DDNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
 

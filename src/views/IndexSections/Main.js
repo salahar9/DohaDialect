@@ -6,7 +6,7 @@ const Main = () => {
     <>
       <div className="main-container">
         <Row>
-          <Col className="col-lg-7 col-sm-12 main-box p-lg-2 p-xs-0">
+          <Col className="col-lg-7 col-sm-12 main-box ">
             <div className="col-9">
               <h1 className="Title">DOHA DIALECT </h1>
               <p className="detailtext">

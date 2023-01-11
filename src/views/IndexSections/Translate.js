@@ -3,12 +3,20 @@ import { Form, TextArea, Button, Icon } from "semantic-ui-react";
 import axios from "axios";
 import apiroute from "APIutils";
 export default function Translate() {
+  const [language, setLanguage] = useState("detect");
   const [inputText, setInputText] = useState("");
   const [resultText, setResultText] = useState("");
+  const detectAuto = (e) => {
+    console.log("salam hHHHHHHHH");
+    // await getLanguageSource();
+    // setInputText(e.target.value);
+  };
   const getLanguageSource = async () => {
     const data = await axios.post(`${apiroute}/detect`, {
       q: inputText,
     });
+    setLanguage(data.data[0].language);
+    console.log(data.data[0]);
     return data.data[0].language;
   };
   const translateText = async () => {
@@ -33,7 +41,7 @@ export default function Translate() {
             <Form.Field
               control={TextArea}
               placeholder="Type Text to Translate.."
-              onChange={(e) => setInputText(e.target.value)}
+              onchange={(e) => detectAuto(e)}
             />
 
             <Form.Field
@@ -48,8 +56,8 @@ export default function Translate() {
             </Button>
           </Form>
         </div>
+        {language !== "detect" && <span> we detected {language}</span>}
       </div>
     </div>
   );
 }
-

@@ -8,18 +8,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function TranslateBox() {
   const [inputText, setInputText] = useState("");
+  const [language, setLanguage] = useState("detect");
   const [resultText, setResultText] = useState("");
+  const detectAuto = async (e) => {
+    setInputText(e.target.value);
+    await getLanguageSource();
+  };
   const getLanguageSource = async () => {
     const data = await axios.post(`${apiroute}/detect`, {
       q: inputText,
     });
+    if (data.data[0].confidence > 80) {
+      setLanguage(data.data[0].language);
+    }
+    // console.log(data.data[0]);
     return data.data[0].language;
   };
   const translateText = async () => {
-    const lang = await getLanguageSource();
+    if (language == "detect") {
+      const lang = await getLanguageSource();
+      setLanguage(lang);
+    }
     const response = await axios.post(`${apiroute}/translate`, {
       q: inputText,
-      source: lang,
+      source: language,
       target: "ar",
       format: "text",
     });
@@ -36,7 +48,7 @@ export default function TranslateBox() {
               control={TextArea}
               rows="5"
               placeholder="Type Text to Translate.."
-              onChange={(e) => setInputText(e.target.value)}
+              onChange={async (e) => await detectAuto(e)}
             />
             <Button className="translate-button2" onClick={translateText}>
               {
@@ -55,6 +67,9 @@ export default function TranslateBox() {
             value={resultText}
           />
         </Form>
+        {
+          // {language !== "detect" && <span> we detected {language}</span>}
+        }
       </div>
     </div>
   );

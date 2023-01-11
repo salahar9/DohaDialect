@@ -22,6 +22,9 @@
   margin-bottom: 15px;
   outline: none !important;
 }
+.navbar-toggler > span {
+  color: #8a1538;
+}
 .main-container {
   background: #f1f1f1;
 }
@@ -65,7 +68,7 @@
 }
 .translate-button {
   display: block;
-  background-color: #8a1538 !important;
+  background-color: #ed1c51 !important;
   color: white !important;
   border-radius: 45px !important;
 }
@@ -88,6 +91,7 @@
   width: 48%;
 }
 .field > textarea {
+  font-size: 18px !important;
   border: solid 2px #8a1538 !important;
   border-radius: 25px !important;
   padding: 15px !important;
