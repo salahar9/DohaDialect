@@ -5,33 +5,21 @@ import apiroute from "APIutils";
 export default function Translate() {
   const [inputText, setInputText] = useState("");
   const [resultText, setResultText] = useState("");
-  const [detectLanguageKey, setdetectedLanguageKey] = useState("");
-  const getLanguageSource = () => {
-    axios
-      .post(`${apiroute}/detect`, {
-        q: inputText,
-      })
-      .then((response) => {
-        setdetectedLanguageKey(response.data[0].language);
-      });
-  };
-  const translateText = () => {
-    // setResultText(inputText);
-
-    getLanguageSource();
-
-    let data = {
+  const getLanguageSource = async () => {
+    const data = await axios.post(`${apiroute}/detect`, {
       q: inputText,
-      source: detectLanguageKey,
+    });
+    return data.data[0].language;
+  };
+  const translateText = async () => {
+    const lang = await getLanguageSource();
+    const response = await axios.post(`${apiroute}/translate`, {
+      q: inputText,
+      source: lang,
       target: "ar",
       format: "text",
-    };
-    console.log(data);
-    axios.post(`${apiroute}/translate`, data).then((response) => {
-      console.log(response.data);
-      console.log(response.languageKey);
-      setResultText(response.data.translatedText);
     });
+    setResultText(response.data.translatedText);
   };
   return (
     <div>
@@ -64,3 +52,4 @@ export default function Translate() {
     </div>
   );
 }
+

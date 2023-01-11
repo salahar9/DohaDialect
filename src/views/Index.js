@@ -30,8 +30,8 @@ import Carousel from "./IndexSections/Carousel.js";
 import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
-import 'semantic-ui-css/semantic.min.css';
-import './App.css';
+import "semantic-ui-css/semantic.min.css";
+import "./App.css";
 
 import TranslateBox from "./IndexSections/TranslateBox.js";
 import Carousel_landing from "./IndexSections/Carousel_landing.js";

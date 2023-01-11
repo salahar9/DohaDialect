@@ -1,22 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
-
-.app-header{
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+* {
+  font-family: "El Messiri", sans-serif !important;
+}
+.app-header {
   text-align: center;
   padding: 20px;
 }
 
-.header{
-  font-family: 'Azeret Mono', monospace;
+.header {
+  font-family: "Azeret Mono", monospace;
   font-size: 30px;
 }
 
-.app-body{
+.app-body {
   padding: 20px;
   text-align: center;
 }
 
-.language-select{
+.language-select {
   height: 40px !important;
   margin-bottom: 15px;
   outline: none !important;
 }
+.main-container {
+  background: #f1f1f1;
+}
+.small-box {
+  background-color: #8a1538;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom-left-radius: 50px;
+}
+.main-box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.Title {
+  font-size: 8rem;
+  line-height: 0.7;
+  padding: 15px;
+  overflow: false;
+  background: -webkit-linear-gradient(#8a1538, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mascot-image {
+  position: absolute;
+  left: -50px;
+  height: 95%;
+}
+.detailtext {
+  /* font-weight: lighter; */
+  color: grey !important;
+  margin: 10px;
+}
+.translate-button {
+  display: block;
+  background-color: #8a1538;
+  color: white;
+  border-radius: 45px;
+}
+.nav-link-inner--text {
+  color: black !important;
+}
+.logo {
+  height: 50px !important;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.field {
+  width: 48%;
+}
+.field > textarea {
+  border: solid 1px #8a1538 !important;
+  border-radius: 5px !important;
+}
+.sec2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
