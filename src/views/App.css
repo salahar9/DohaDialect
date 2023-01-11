@@ -8,7 +8,7 @@
 }
 
 .header {
-  font-family: "Azeret Mono", monospace;
+  font-fami5y: "Azeret Mono", monospace;
   font-size: 30px;
 }
 
@@ -37,7 +37,12 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 50px;
+  /* padding: 50px; */
+}
+@media (min-width: 992px) {
+  .main-box {
+    padding: 50px;
+  }
 }
 .Title {
   font-size: 8rem;
@@ -60,9 +65,9 @@
 }
 .translate-button {
   display: block;
-  background-color: #8a1538;
-  color: white;
-  border-radius: 45px;
+  background-color: #8a1538 !important;
+  color: white !important;
+  border-radius: 45px !important;
 }
 .nav-link-inner--text {
   color: black !important;
@@ -75,17 +80,55 @@
   justify-content: space-around;
   width: 100%;
 }
-.field {
+
+.field:nth-of-type(2) > textarea {
+  cursor: default;
+}
+.field:nth-of-type(2) {
   width: 48%;
 }
 .field > textarea {
-  border: solid 1px #8a1538 !important;
-  border-radius: 5px !important;
+  border: solid 2px #8a1538 !important;
+  border-radius: 25px !important;
+  padding: 15px !important;
+}
+.sec2-main {
+  background-color: #f1f1f1;
 }
 .sec2 {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+.sec2-title:nth-of-type(2) {
+  text-align: center;
+  font-size: xxx-large;
+  color: #8a1538;
+}
+.sec2-title:nth-of-type(1) {
+  text-align: center;
+  font-size: xxx-large;
+  color: white;
+  background-color: #8a1538;
+}
+.translate-box {
+  position: relative;
+  width: 48%;
+}
 
+.translate-button2 {
+  font-size: x-large !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 15px !important;
+  background-color: #ed1c51 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: -10px !important;
+  right: -20px !important;
+  width: 50px !important;
+  height: 50px !important;
+}
