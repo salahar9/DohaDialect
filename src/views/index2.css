@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+* {
+  font-family: "El Messiri", sans-serif !important;
+}
+
+/*
+body {
+    margin: 50px -150px;
+    padding: 0;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+table {
+    
+    width: 90%;
+    margin-left: 5% ;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+.container {
+    background-color: white;
+    
+}
+*/
+#matches_table tbody td {
+    font-size: 1.5em;
+}
+
+.text-force-left {
+    text-align: left !important;
+}
+
+.text-force-right {
+    text-align: right !important;
+}
+
+
+li{
+display: inline-block;
+padding:0.5rem;
+
+}
+li > a{
+text-decoration:none;
+color:white;
+}
+body{
+background-color:#f1f1f1;
+}
+.container >.row{
+margin-top:7.8%;
+display:block;
+}
+.container tr{
+color:black;
+
+}
+.fifa-img-logo {
+    padding: 1% 30% 1% 30%;
+}
+
+.table-header {
+    /* background-color: lightgrey; */
+    /* background: -webkit-linear-gradient(#8a1538, #000); */
+    background-color: white;
+}
+
+.group-winners tr:nth-child(2) ,.group-winners tr:nth-child(1) {
+   color:white;
+    
+}
+
+.group-winners tr:nth-child(1) {
+    background-color: #8a1538  ;
+   
+}
+.group-winners tr:nth-child(2) {
+    background-color: #8a1538;
+    
+}
+
+.group-matches tr:nth-child(odd) {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px dotted lightgray;
+}
+
+.group-team-name {
+    text-align: right;
+    display: inline-block;
+}
+
+.inline-flag-small {
+    height: 1.0em;
+    width : 1.3em;
+    border: 1px solid #D2D2D2;
+}
+.nav-wrapper{
+background-color:#f1f1f1;
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+}
+.match-date{
+color: white;
+    font-size: medium !important;
+    }
+
+.nav-wrapper > ul{
+padding:15px;
+font-size:20px;
+border-radius:25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.inline-flag-large {
+    height: 2.0em;
+    width : 3.0em;
+    vertical-align: middle;
+    border: 1px solid #D2D2D2;
+}
+
+.match-date {
+    font-size: 0.7em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: #8a1538;
+}
+
+.match-result {
+    font-size: 2.0em;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.match-team {
+    font-size: 1.2em;
+}
+
+.match-result-spacer {
+    font-size: 2.0em;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.knockout-result-penalty {
+    font-size: 0.5em;
+}

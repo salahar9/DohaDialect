@@ -4,10 +4,16 @@ import DDLanding from "views/examples/DDLanding.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
-import Scores from "views/examples/Scores.js";
+import Scores from "views/Scores.js";
 import Weather from "views/Weather.js";
 
 const routes = [
+  {
+    path: "/scores",
+    key: "index2",
+    component: Scores,
+    protected: false,
+  },
   {
     path: "/",
     key: "index2",
@@ -41,12 +47,6 @@ const routes = [
     path: "/register-page",
     key: "register",
     component: Register,
-  },
-  {
-    path: "/scores-page",
-    key: "scores",
-    component: Scores,
-    protected: false,
   },
 ];
 

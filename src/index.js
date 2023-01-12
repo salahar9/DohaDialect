@@ -15,14 +15,15 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch } from "react-router-dom";
 
 import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
-
+import DDNavbar from "./views/IndexSections/Navbar";
+import DDFooter from "components/Footers/DDFooter.js";
 import App from "App";
 
 import { AuthProvider } from "./auth-context/auth.context";
@@ -34,9 +35,13 @@ user = JSON.parse(user);
 ReactDOM.render(
   <AuthProvider userData={user}>
     <BrowserRouter>
-      <Switch>
-        <App />
-      </Switch>
+      <Fragment>
+        <DDNavbar />
+        <Switch>
+          <App />
+        </Switch>
+        <DDFooter />
+      </Fragment>
     </BrowserRouter>
   </AuthProvider>,
   root

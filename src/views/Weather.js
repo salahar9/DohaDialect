@@ -193,26 +193,6 @@ function App() {
   });
   return (
     <div className="container">
-      <div
-        className="blur"
-        style={{
-          background: `${
-            weatherData ? BackgroundColor(weatherData) : "#a6ddf0"
-          }`,
-          top: "-10%",
-          right: "0",
-        }}
-      ></div>
-      <div
-        className="blur"
-        style={{
-          background: `${
-            weatherData ? BackgroundColor(weatherData) : "#a6ddf0"
-          }`,
-          top: "36%",
-          left: "-6rem",
-        }}
-      ></div>
       <div className="content">
         <div className="info-container">
           <div className="info-inner-container">
@@ -244,7 +224,7 @@ function App() {
           {loading ? (
             <div className="loader"></div>
           ) : (
-            <span>
+            <div>
               {weatherData.length === 0 ? (
                 <div className="nodata">
                   <h1>{noData ?? t("no-data")}</h1>
@@ -294,7 +274,7 @@ function App() {
                   </ul>
                 </>
               )}
-            </span>
+            </div>
           )}
         </div>
       </div>

@@ -21,7 +21,8 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 const DDNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
 
@@ -50,7 +51,10 @@ const DDNavbar = () => {
               />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
-              <span className="navbar-toggler-icon" />
+              {
+                // <span className="navbar-toggler-icon" />
+              }
+              <FontAwesomeIcon icon={faBars} />
             </button>
             <UncontrolledCollapse
               toggler="#navbar_global"
@@ -70,51 +74,24 @@ const DDNavbar = () => {
                     </Link>
                   </Col>
                   <Col className="collapse-close" xs="6">
-                    <button
-                      className="navbar-toggler"
-                      id="navbar_global"
-                    ></button>
+                    <button className="navbar-toggler" id="navbar_global">
+                      <FontAwesomeIcon icon={faXmark} className="xicon" />
+                    </button>
                   </Col>
                 </Row>
               </div>
               <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                <NavLink href="/" target="/">
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span
-                        className="navlinks nav-link-inner--text"
-                        to="/DDlanding-page"
-                        tag={Link}
-                      >
-                        Home
-                      </span>
-                    </DropdownToggle>
-                  </UncontrolledDropdown>
+                <NavItem>
+                  <NavLink tag={Link} to="/">
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavLink tag={Link} to="/weather">
+                  Weather
                 </NavLink>
-
-                <UncontrolledDropdown nav>
-                  <DropdownToggle nav>
-                    <i className="ni ni-collection d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Weather</span>
-                  </DropdownToggle>
-                </UncontrolledDropdown>
-
-                <NavLink href="/scores-page" target="/scores-page">
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Scores</span>
-                    </DropdownToggle>
-                  </UncontrolledDropdown>
+                <NavLink tag={Link} to="/scores">
+                  Scores
                 </NavLink>
-
-                <UncontrolledDropdown nav>
-                  <DropdownToggle nav>
-                    <i className="ni ni-collection d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">About us</span>
-                  </DropdownToggle>
-                </UncontrolledDropdown>
               </Nav>
             </UncontrolledCollapse>
           </Container>

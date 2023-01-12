@@ -136,3 +136,39 @@
   width: 50px !important;
   height: 50px !important;
 }
+.nav-link {
+  color: black !important;
+}
+.navbar-toggler > svg {
+  color: #8a1538;
+}
+.xicon {
+  color: #8a1538;
+}
+.more-info p > span {
+  color: #8a1538 !important;
+}
+.footer {
+  background-color: #8a1538 !important;
+}
+.footer > * {
+  color: white;
+}
+.footer h4,
+.footer h3,
+.footer a {
+  color: white;
+}
+.footer a {
+  margin-top: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-social {
+  font-size: 20px;
+}
+.footer-logo {
+  width: 5rem;
+  margin: 25px;
+}
