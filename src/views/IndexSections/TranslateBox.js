@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Form, TextArea, Button, Icon } from "semantic-ui-react";
 import axios from "axios";
-import apiroute from "APIutils";
+//import apiroute from "APIutils";
+//${apiroute}=https://libretranslate.de
 import "semantic-ui-css/semantic.min.css";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +16,7 @@ export default function TranslateBox() {
     await getLanguageSource();
   };
   const getLanguageSource = async () => {
-    const data = await axios.post(`${apiroute}/detect`, {
+    const data = await axios.post(`https://libretranslate.de/detect`, {
       q: inputText,
     });
     if (data.data[0].confidence > 80) {
@@ -29,7 +30,7 @@ export default function TranslateBox() {
       const lang = await getLanguageSource();
       setLanguage(lang);
     }
-    const response = await axios.post(`${apiroute}/translate`, {
+    const response = await axios.post(`https://libretranslate.de/translate`, {
       q: inputText,
       source: language,
       target: "ar",
@@ -39,7 +40,7 @@ export default function TranslateBox() {
   };
   return (
     <div className="h-100vh sec2-main">
-      <h1 className="sec2-title"> Use this boxes to translate text </h1>
+      <h1 className="sec2-title"> Use this box to translate your text </h1>
       <h1 className="sec2-title"> استعمل الخانة أسفله لترجمة نصوصك</h1>
       <div className="sec2">
         <Form>

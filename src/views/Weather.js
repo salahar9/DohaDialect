@@ -13,7 +13,8 @@ import BackgroundColor from "../components/BackgroundColor";
 import axios from "axios";
 
 function App() {
-  const API_KEY = process.env.REACT_APP_API_KEY;
+//  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = `5e66866e169e85300aaf66597fc14ea2`;
   const { t, i18n } = useTranslation();
   const [noData, setNoData] = useState();
   const [searchTerm, setSearchTerm] = useState("");
